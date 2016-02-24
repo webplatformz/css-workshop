@@ -1,4 +1,90 @@
+* {
+    line-height: 1.2;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
 html, body {
+    margin: 0;
+    padding: 0 20px;
     min-height: 100%;
     background-color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.player {
+    flex: 25%;
+    min-width: 400px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    background-color: #27ae60;
+
+    transition: all .5s ease;
+}
+
+.player:nth-child(2n) {
+    background-color: #16a085;
+}
+
+.player:nth-child(2n):hover {
+    background-color: #19b698;
+}
+
+
+.player:hover {
+    background-color: #2cc36b;
+    box-shadow: 2px 2px 10px 0px #000;
+}
+
+.player:hover .player-pic, .player:hover .player-pic img {
+    border-radius: 5px;
+}
+
+.player-pic, .player-pic img {
+    transition: border-radius .5s ease;
+    border-radius: 50%;
+}
+
+.player-pic {
+    position: relative;
+    margin: 20px auto 40px;
+    width: 50%;
+}
+
+.player-pic img {
+    width: 100%;
+    border: 1px solid #FFF;
+}
+
+.player-name {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background: rgba(127, 140, 141, 0.8);
+
+    transition: opacity .5s ease;
+}
+
+.player:hover .player-name {
+    opacity: 0;
+}
+
+.player-description, .player-name {
+    font-size: 15pt;
+    color: white;
+}
+
+.player-description:first-letter {
+    font-size: 24pt;
 }
