@@ -8,3 +8,18 @@ html, body {
     min-height: 100%;
     background-color: #333;
 }
+
+div {
+    margin: 0 auto;
+    color: #FFF;
+    width: 400px;
+    background-color: cornflowerblue;
+}
+
+div h1 {
+    text-align: center;
+}
+
+div span {
+    margin: 50px;
+}
