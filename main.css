@@ -20,6 +20,9 @@ div {
     color: #FFF;
     width: 400px;
     background-color: cornflowerblue;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 div h1 {
