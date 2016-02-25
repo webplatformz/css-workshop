@@ -33,6 +33,13 @@ div {
 
 div h1 {
     text-align: center;
+    transition: all 0.5s ease;
+}
+
+div h1:hover {
+    color: darkorange;
+    font-size: 48pt;
+    transform: rotate(360deg);
 }
 
 div span {
