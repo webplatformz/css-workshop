@@ -6,11 +6,17 @@ document.addEventListener("DOMContentLoaded", function() {
         player.addEventListener('click', function() {
             playerElements.forEach(function(element) {
                 if (element === player && !element.classList.contains('selected')) {
-                    element.classList.add('selected')
+                    element.classList.add('selected');
                 } else {
-                    element.classList.remove('selected')
+                    element.classList.remove('selected');
                 }
             });
+
+            if (document.querySelectorAll('.player.selected').length) {
+                document.body.classList.add('selected');
+            } else {
+                document.body.classList.remove('selected');
+            }
         });
     });
 });
