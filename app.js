@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for(var i = 0; i < playerElements.length; i++) {
         var player = playerElements[i];
-        player.addEventListener('click', function() {
+        player.addEventListener('click', function(player) {
             for(var j = 0; j < playerElements.length; j++) {
                 var actPlayer = playerElements[j];
                 if (actPlayer === player && !actPlayer.classList.contains('selected')) {
@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 document.body.classList.remove('selected');
             }
-        });
+        }.bind(null, player));
     }
 });
