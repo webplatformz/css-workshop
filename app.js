@@ -2,15 +2,18 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     var playerElements = document.querySelectorAll('div.player');
-    playerElements.forEach(function(player) {
+
+    for(var i = 0; i < playerElements.length; i++) {
+        var player = playerElements[i];
         player.addEventListener('click', function() {
-            playerElements.forEach(function(element) {
-                if (element === player && !element.classList.contains('selected')) {
-                    element.classList.add('selected');
+            for(var j = 0; j < playerElements.length; j++) {
+                var actPlayer = playerElements[j];
+                if (actPlayer === player && !actPlayer.classList.contains('selected')) {
+                    actPlayer.classList.add('selected');
                 } else {
-                    element.classList.remove('selected');
+                    actPlayer.classList.remove('selected');
                 }
-            });
+            }
 
             if (document.querySelectorAll('.player.selected').length) {
                 document.body.classList.add('selected');
@@ -18,5 +21,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.body.classList.remove('selected');
             }
         });
-    });
+    }
 });
